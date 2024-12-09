@@ -80,12 +80,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-// State variables
 const username = ref<string>("");
 const profile = ref<null | Record<string, any>>(null);
 const error = ref<string | null>(null);
 
-// Function to fetch GitHub profile
 const fetchGitHubProfile = async () => {
   profile.value = null;
   error.value = null;
@@ -122,12 +120,12 @@ const fetchGitHubProfile = async () => {
   font-size: 14px;
   border: 1px solid #d6ddd4;
   background: #f6f8fa;
-  padding-right: 10px;
+  padding: 10px;
 }
 
 .btn {
-  width: 24px;
-  height: 24px;
+  width: 29px;
+  height: 29px;
   border: 1px solid #d6ddd4;
   border-radius: 4px;
   background: #f6f8fa;
@@ -143,8 +141,8 @@ const fetchGitHubProfile = async () => {
 
 .mid {
   position: fixed;
-  top: 12px;
-  right: 10px;
+  top: 17px;
+  right: 20px;
   display: flex;
   height: 24px;
   line-height: 24px;
@@ -167,7 +165,7 @@ input::placeholder {
 }
 
 .li {
-  height: 24px;
+  height: 29px;
   border-left: 1px solid #d6ddd4;
   margin-top: auto;
   margin-left: 10px;
@@ -187,7 +185,7 @@ input::placeholder {
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 2fr 6fr;
   width: 100vw;
   height: 100vh;
   gap: 10px;
@@ -201,11 +199,12 @@ h2 {
 .column0 {
   display: flex;
   border-right: 1px solid #d6ddd4;
+  padding: 0 20px;
 }
 
 .column0 .lookup {
   width: 90%;
-  height: 40px;
+  height: 29px;
   line-height: 24px;
   border: 1px solid #d6ddd4;
   border-radius: 4px;
@@ -217,7 +216,7 @@ h2 {
 .div {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   height: 100px;
   margin: 0 auto;
   margin-top: 40px;
@@ -235,20 +234,22 @@ li {
 
 .profileDiv {
   position: relative;
-  width: 100%;
+  width: 90%;
   font-size: 12px;
   border: 1px solid #d6ddd4;
   border-radius: 4px;
   margin-top: 10px;
+  margin-left: 40px;
   padding: 10px;
   padding-top: 20px;
 }
 
 .profileDiv img {
-  width: 10%;
-  height: 100%;
+  width: 49px;
+  height: 122.9%;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 
 .div0 {
@@ -261,6 +262,7 @@ li {
   border: 1px solid #f6f8fa;
   border-radius: 2px;
   background: #f6f8fa;
+  margin-top: 20px;
 }
 
 .linkbtn {
@@ -275,9 +277,13 @@ li {
   color: #59656f;
 }
 
+h1 {
+  margin-left: 40px;
+}
+
 h {
   margin: 10px;
-  margin-top: auto;
+  margin-top: 14.9px;
   margin-bottom: auto;
 }
 
