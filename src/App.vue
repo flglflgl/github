@@ -13,16 +13,20 @@
           placeholder="Type / to search"
         />
         <button id="submitbtn" class="btn" @click="fetchGitHubProfile">
-          <img src="https://www.systemuicons.com/images/icons/search.svg" />
+          <img src="./assets/search.svg" />
         </button>
         <div class="li"></div>
-        <button class="btn"></button>
-        <button class="btn"></button>
         <button class="btn">
-          <img src="https://www.systemuicons.com/images/icons/plus.svg" />
+          <img src="./assets/plus.svg">
         </button>
         <button class="btn">
-          <img src="https://www.systemuicons.com/images/icons/inbox.svg" />
+          <img src="./assets/issues.svg" />
+        </button>
+        <button class="btn">
+          <img src="./assets/pull.svg" />
+        </button>
+        <button class="btn">
+          <img src="./assets/inbox.svg" />
         </button>
       </div>
     </div>
@@ -79,6 +83,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import fetch from "node-fetch";
 
 const username = ref<string>("");
 const profile = ref<null | Record<string, any>>(null);
