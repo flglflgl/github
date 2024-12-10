@@ -2,7 +2,7 @@
   <div>
     <div class="top">
       <button class="btn">
-        <img src="https://www.systemuicons.com/images/icons/menu_hamburger.svg" />
+        <img src="./assets/menu.svg" />
       </button>
       <div class="mid">
         <input
@@ -16,18 +16,10 @@
           <img src="./assets/search.svg" />
         </button>
         <div class="li"></div>
-        <button class="btn">
-          <img src="./assets/plus.svg">
-        </button>
-        <button class="btn">
-          <img src="./assets/issues.svg" />
-        </button>
-        <button class="btn">
-          <img src="./assets/pull.svg" />
-        </button>
-        <button class="btn">
-          <img src="./assets/inbox.svg" />
-        </button>
+        <button class="btn"><img src="./assets/plus.svg"></button>
+        <button class="btn"><img src="./assets/issues.svg" /></button>
+        <button class="btn"><img src="./assets/pull.svg" /></button>
+        <button class="btn"><img src="./assets/inbox.svg" /></button>
       </div>
     </div>
 
@@ -117,6 +109,7 @@ const fetchGitHubProfile = async () => {
 
 .top {
   display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -129,24 +122,29 @@ const fetchGitHubProfile = async () => {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   width: 29px;
   height: 29px;
   border: 1px solid #d6ddd4;
   border-radius: 4px;
   background: #f6f8fa;
-  margin-top: auto;
-  margin-bottom: auto;
   margin-left: 10px;
 }
 
 .top img {
+  width: 80%;
+  height: 80%;
   filter: invert(40%) sepia(8%) saturate(767%) hue-rotate(165deg)
     brightness(90%) contrast(84%);
+  stroke-width: 1%;
+  margin: 0 auto;
 }
 
 .mid {
+  display: flex;
+  align-items: center;
   position: fixed;
-  top: 17px;
   right: 20px;
   display: flex;
   height: 24px;
@@ -170,11 +168,9 @@ input::placeholder {
 }
 
 .li {
-  height: 29px;
+  height: 20px;
   border-left: 1px solid #d6ddd4;
-  margin-top: auto;
   margin-left: 10px;
-  margin-bottom: auto;
 }
 
 /* ---------- #BOTTOM ---------- */
