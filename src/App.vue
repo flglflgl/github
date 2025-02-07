@@ -1,10 +1,19 @@
 <template>
   <div>
+
+    <!-- Top -->
     <div class="top">
+
+      <!-- Top left holding logo -->
+       <div class="left">
       <button class="btn">
         <img src="./assets/menu.svg" />
       </button>
-      <div class="mid">
+      </div>
+
+
+      <!-- Top right holding input/buttons -->
+      <div class="right">
         <input
           id="lookup"
           class="lookup"
@@ -23,6 +32,7 @@
       </div>
     </div>
 
+    <!-- Grid -->
     <div class="grid">
       <div class="column0">
         <div class="div">
@@ -34,11 +44,12 @@
             disabled
           />
           <ul>
-            <li>lnlnlnnln/</li>
-            <li>lnlnlnnln/</li>
-            <li>lnlnlnnln/</li>
-            <li>lnlnlnnln/</li>
+            <li><span class="circ"></span>dnnnnnnnnnn/github</li>
+  <li><span class="circ"></span>dnnnnnnnnnn/shorturl</li>
+  <li><span class="circ"></span>dnnnnnnnnnn/tip</li>
           </ul>
+
+          <button class="showbtn">Show more</button>
         </div>
       </div>
 
@@ -69,7 +80,6 @@
       </div>
     </div>
 
-    <div class="bottom"></div>
   </div>
 </template>
 
@@ -97,6 +107,15 @@ const fetchGitHubProfile = async () => {
 </script>
 
 <style scoped>
+
+/*
+**
+** Top
+**
+** Grid
+**
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -116,48 +135,50 @@ const fetchGitHubProfile = async () => {
   right: 0;
   height: 10%;
   font-size: 14px;
-  border: 1px solid #d6ddd4;
+  border: 1px solid #d1d9e0;
   background: #f6f8fa;
   padding: 10px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  width: 29px;
-  height: 29px;
-  border: 1px solid #d6ddd4;
-  border-radius: 4px;
-  background: #f6f8fa;
-  margin-left: 10px;
-}
+/* Top button img */
 
 .top img {
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   filter: invert(40%) sepia(8%) saturate(767%) hue-rotate(165deg)
     brightness(90%) contrast(84%);
-  stroke-width: 1%;
+  stroke-width: 2.9%;
   margin: 0 auto;
 }
 
-.mid {
+/* Top right holding input/buttons */
+
+.right {
   display: flex;
   align-items: center;
   position: fixed;
   right: 20px;
-  display: flex;
-  height: 24px;
-  line-height: 24px;
   margin: 0 auto;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.lookup {
+.btn {
+  display: flex;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #d1d9e0;
+  border-radius: 4px;
+  background: #f6f8fa;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.top input {
   width: 220px;
-  height: 120%;
-  border: 1px solid #d6ddd4;
+  height: 27px;
+  border: 1px solid #d1d9e0;
   border-radius: 4px;
   background: #f6f8fa;
   padding-left: 5px;
@@ -169,24 +190,15 @@ input::placeholder {
 
 .li {
   height: 20px;
-  border-left: 1px solid #d6ddd4;
+  border-left: 1px solid #d1d9e0;
   margin-left: 10px;
-}
-
-/* ---------- #BOTTOM ---------- */
-
-.bottom {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 10%;
 }
 
 /* ---------- #GRID ---------- */
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 2fr 8fr;
   width: 100vw;
   height: 100vh;
   gap: 10px;
@@ -199,26 +211,36 @@ h2 {
 
 .column0 {
   display: flex;
-  border-right: 1px solid #d6ddd4;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid #d1d9e0;
   padding: 0 20px;
 }
 
 .column0 .lookup {
   width: 90%;
-  height: 29px;
-  line-height: 24px;
-  border: 1px solid #d6ddd4;
+  height: 24px;
+  border: 1px solid #d1d9e0;
   border-radius: 4px;
   background: #f6f8fa;
   margin-top: 10px;
   padding-left: 4.9px;
 }
 
+.showbtn {
+  border: none;
+  background: none;
+  color: #69727c;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+}
+
 .div {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  height: 100px;
+  flex-grow: 1;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -226,18 +248,29 @@ h2 {
 ul {
   list-style-type: none;
   font-size: 12px;
+  margin: 10px 0;
 }
 
 li {
+  display: flex;
+  align-items: center;
   margin-top: 10px;
   margin-left: 4px;
+}
+
+.circ {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #cbcbcc;
+  margin: 0 10px 0 0;
 }
 
 .profileDiv {
   position: relative;
   width: 90%;
   font-size: 12px;
-  border: 1px solid #d6ddd4;
+  border: 1px solid #d1d9e0;
   border-radius: 4px;
   margin-top: 10px;
   margin-left: 40px;
@@ -272,11 +305,14 @@ li {
   right: 20px;
   width: 70px;
   height: 29px;
-  border: 1px solid #d6ddd4;
+  border: 1px solid #d1d9e0;
   border-radius: 4px;
   background: #f6f8fa;
   color: #59656f;
+  cursor: pointer;
 }
+
+/* ---------- #HELPERS ---------- */
 
 h1 {
   margin-left: 40px;
