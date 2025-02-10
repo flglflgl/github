@@ -1,5 +1,12 @@
-<h1>Github User Profile</h1>
+<h2>Github User Viewer</h2>
 
-<img src="">
+Github User Viewer is a tool utilising Github's API to lookup Github users built with Vue.JS
 
-<p>HTML, CSS, Typescript, Vue.js</p>
+<h2>Technoligies</h2>
+
+Vue.JS HTML CSS JS TypeScript
+
+<video width="320" height="240" muted playsinline>
+<source src="public/github.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
