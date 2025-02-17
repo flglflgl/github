@@ -182,6 +182,7 @@ const fetchGitHubProfile = async () => {
   border-radius: 4px;
   background: #f6f8fa;
   padding-left: 5px;
+  outline: none;
 }
 
 input::placeholder {
